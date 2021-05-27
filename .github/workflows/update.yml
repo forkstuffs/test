@@ -28,7 +28,8 @@ jobs:
       - uses: repo-sync/pull-request@v2
         with:
           source_branch: update
-          pr_body: 'Closes #4'
+          pr_body: "Closes #4"
+          pr_title: "Pulling update into master"
           pr_label: "automerge,release/patch"
           pr_allow_empty: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
