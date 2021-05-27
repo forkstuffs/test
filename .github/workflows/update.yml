@@ -30,5 +30,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           title: 'update'
-          branch: "update"
           labels: automerge, release/patch
