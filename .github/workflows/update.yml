@@ -28,6 +28,6 @@ jobs:
       - uses: thomaseizinger/create-pull-request@master
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          head: ${{ github.ref }}
-          base: main
+          head: 'update'
+          base: 'main'
           title: 'update'
