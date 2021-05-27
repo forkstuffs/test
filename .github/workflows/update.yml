@@ -3,12 +3,10 @@ name: up
 on:
   issues:
     types: [opened, reopened]
-  pull_request:
-    types: [opened]
 
 jobs:
   update:
-    if: github.event == 'issues' && github.event.issue.title == 'update' && github.event.sender.login == 'portlek'
+    if: github.event.issue.title == 'update' && github.event.sender.login == 'portlek'
     runs-on: ubuntu-latest
     steps:
       - uses: peterjgrainger/action-create-branch@v2.0.1
