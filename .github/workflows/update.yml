@@ -24,7 +24,10 @@ jobs:
       - run: |
           git commit -am "update" --allow-empty
           git push
-
+  pull:
+    needs: update
+    runs-on: ubuntu-latest
+    steps:
       - uses: devops-infra/action-pull-request@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
