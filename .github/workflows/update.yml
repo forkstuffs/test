@@ -19,6 +19,10 @@ jobs:
 
       - uses: fregante/setup-git-user@v1
 
+      - uses: actions/checkout@v2
+        with:
+          ref: update
+
       - run: |
           git commit -am "update" --allow-empty
           git push
