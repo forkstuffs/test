@@ -25,9 +25,10 @@ jobs:
           git commit -am "update" --allow-empty
           git push
 
-      - uses: gr2m/create-or-update-pull-request-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: devops-infra/action-pull-request@master
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          source_branch: 'update'
+          target_branch: 'main'
           title: 'update'
-          labels: automerge, release/patch
+          label: 'automerge, release/patch'
